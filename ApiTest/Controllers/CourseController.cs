@@ -27,9 +27,11 @@ namespace ApiTest.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Course> GetTModelById(int id)
+        public ActionResult<IEnumerable<Course>> GetTModelById(int id)
         {
-            return _db.Course.Find(id);
+            return _db.Course.Where(b => b.CourseId == id)
+                             .Where(b => b.IsDeleted == false)
+                             .ToList();
         }
 
         [HttpPost("")]
@@ -47,6 +49,7 @@ namespace ApiTest.Controllers
             var c = _db.Course.Find(id);
             c.Credits = model.Credits;
             c.Title = model.Title;
+            c.DepartmentId = model.DepartmentId;
 
             _db.SaveChanges();
 
@@ -57,7 +60,7 @@ namespace ApiTest.Controllers
         public ActionResult<Course> DeleteTModelById(int id)
         {
             var c = _db.Course.Find(id);
-            _db.Course.Remove(c);
+            c.IsDeleted = true;
 
             _db.SaveChanges();
 
