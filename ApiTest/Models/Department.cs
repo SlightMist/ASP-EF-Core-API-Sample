@@ -24,6 +24,10 @@ namespace ApiTest.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateModified { get; set; }
 
+        [Required]
+        public bool IsDeleted { get; set; }
+
+
         public virtual Person Instructor { get; set; }
         public virtual ICollection<Course> Course { get; set; }
     }
