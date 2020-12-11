@@ -7,7 +7,7 @@ namespace ApiTest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            /*migrationBuilder.CreateTable(
                 name: "Person",
                 columns: table => new
                 {
@@ -171,10 +171,12 @@ namespace ApiTest.Migrations
                 name: "IX_OfficeAssignment_InstructorID",
                 table: "OfficeAssignment",
                 column: "InstructorID");
+            */
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            /*
             migrationBuilder.DropTable(
                 name: "CourseInstructor");
 
@@ -192,6 +194,7 @@ namespace ApiTest.Migrations
 
             migrationBuilder.DropTable(
                 name: "Person");
+            */
         }
     }
 }
