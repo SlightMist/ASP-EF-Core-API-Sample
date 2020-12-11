@@ -1,4 +1,4 @@
-# ASP-.NET-Core-EF-Core-API-Sample
+# ASP.NET Core EFCore-API-Sample
 
 ## Homework 1
 
