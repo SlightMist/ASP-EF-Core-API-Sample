@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj": {}
+    "d:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj": {}
   },
   "projects": {
-    "D:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj": {
+    "d:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj",
+        "projectUniqueName": "d:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj",
         "projectName": "ApiTest",
-        "projectPath": "D:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj",
+        "projectPath": "d:\\_Net\\Homework\\ApiTest\\ApiTest\\ApiTest.csproj",
         "packagesPath": "C:\\Users\\lf123\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net\\Homework\\ApiTest\\ApiTest\\obj\\",
+        "outputPath": "d:\\_Net\\Homework\\ApiTest\\ApiTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

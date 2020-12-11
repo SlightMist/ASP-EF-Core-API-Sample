@@ -31,6 +31,9 @@ namespace ApiTest
             // using Microsoft.EntityFrameworkCore;
             services.AddDbContext<ContosouniversityContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<ContosouniversityContextProcedures>();
+
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
