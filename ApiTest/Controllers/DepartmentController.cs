@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApiTest.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 //using ApiTest.Models;
 
 namespace ApiTest.Controllers
@@ -20,6 +22,12 @@ namespace ApiTest.Controllers
         {
             _procedures = procedures;
             _db = db;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Department> GetTModelById(int id)
+        {
+            return _db.Department.Find(id);
         }
 
 
@@ -58,6 +66,14 @@ namespace ApiTest.Controllers
                     .GetAwaiter().GetResult();
 
             return Ok();
+        }
+
+
+        [HttpGet("CourseCount/{id}")]
+        public async Task<ActionResult<IEnumerable<VwDepartmentCourseCount>>> GetVwDepartmentCourseCountById(int id)
+        {
+            return await _db.VwDepartmentCourseCount.FromSqlInterpolated($"SELECT * FROM vwDepartmentCourseCount WHERE DepartmentID = {id}").ToListAsync();
+
         }
     }
 }

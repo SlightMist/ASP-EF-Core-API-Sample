@@ -63,5 +63,24 @@ namespace ApiTest.Controllers
 
             return Ok(c);
         }
+
+
+        [HttpGet("Students/{id}")]
+        public ActionResult<IEnumerable<VwCourseStudents>> GetVwCourseStudentsById(int id)
+        {
+            var c = _db.Course.Find(id);
+            return _db.VwCourseStudents.Where(x => x.CourseId == id).ToList();
+        }
+
+        [HttpGet("StudentCount/{id}")]
+        public ActionResult<IEnumerable<VwCourseStudentCount>> GetVwCourseStudentCountById(int id)
+        {
+            var c = _db.Course.Find(id);
+            return _db.VwCourseStudentCount.Where(x => x.CourseId == id).ToList();
+        }
+
+
+
+
     }
 }
